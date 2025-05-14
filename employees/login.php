@@ -3,16 +3,15 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <title>Employee Login</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <style>
       body {
-        font-family: "Arial";
+        font-family: 'Poppins', sans-serif;
         background-image: url("photos/employee.jpg");
         background-size: cover;
         background-position: center;
@@ -22,42 +21,75 @@
         padding: 0;
         overflow: hidden;
       }
-      html {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-      }
       .login-container {
         max-width: 500px;
         margin: 100px auto;
-        background-color: white;
-        border-radius: 5px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       }
       .login-header {
-        background-color: #f8f9fa;
-        padding: 20px;
-        border-bottom: 1px solid #e9ecef;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
+        background-color: rgba(248, 249, 250, 0.8);
+        padding: 30px;
+        border-bottom: 1px solid rgba(233, 236, 239, 0.5);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+      .login-header h2 {
+        margin: 0;
+        color: #2c3e50;
+        font-weight: 600;
       }
       .login-body {
-        padding: 20px;
+        padding: 30px;
       }
       .login-footer {
-        padding: 15px 20px;
+        padding: 20px 30px;
         text-align: right;
-        border-top: 1px solid #e9ecef;
+        border-top: 1px solid rgba(233, 236, 239, 0.5);
+      }
+      .form-control {
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 12px;
+      }
+      .form-control:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
+      .btn-primary {
+        padding: 12px 30px;
+        border-radius: 10px;
+        background-color: #007bff;
+        border: none;
+        transition: all 0.3s ease;
+      }
+      .btn-primary:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+      }
+      .alert {
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+      .register-link {
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .register-link:hover {
+        color: #0056b3;
+        text-decoration: underline;
       }
     </style>
-    <title>Employee Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container">
       <div class="login-container">
         <div class="login-header">
-          <h2>Welcome to Employees Dashboard! Login Now!</h2>
+          <h2>Welcome to Employee Dashboard</h2>
         </div>
         <form action="core/handleForms.php" method="POST">
           <div class="login-body">
@@ -80,7 +112,7 @@
               <label for="password">Password</label>
               <input type="password" class="form-control" id="password" name="password" required>
             </div>
-            <p>Don't have an account yet? You may <a href="register.php">register here!</a></p>
+            <p>Don't have an account yet? <a href="register.php" class="register-link">Register here!</a></p>
           </div>
           <div class="login-footer">
             <button type="submit" class="btn btn-primary" name="loginUserBtn">Login</button>
